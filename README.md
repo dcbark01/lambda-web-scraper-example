@@ -3,14 +3,14 @@ This is an example of a web scraper running on AWS Lambda and Lambda Layers. It 
 
 ### Create a CDK app enviroment
 
+ 	# Create a new directory with whatever you want to name your app
+  	mkdir scraper-demo
+   	cd scraper-demo
 	cdk init --language python
 
-### install libraries
-
-	pip install aws-cdk.core
-	pip install aws-cdk.aws_lambda
-	pip install aws-cdk.aws_events_targets
-	pip install aws-cdk.aws_events
+ 	python -m venv .venv
+  	source .venv/bin/activate
+   	pip install -r requirements.txt
 
 ### copy the files below to created app folder
 
@@ -18,7 +18,7 @@ This is an example of a web scraper running on AWS Lambda and Lambda Layers. It 
 	index.py
 	app.py
 	Dockerfile
-	lambda_app/lambda_app_stack.py
+	scraper_demo/scraper_demo_stack.py
 
 
 ### build the Docker image, the output will be stored in python/ folder
